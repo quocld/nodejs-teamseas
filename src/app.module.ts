@@ -3,7 +3,6 @@ import { GraphQLISODateTime, GraphQLModule } from '@nestjs/graphql';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ApolloServerPluginLandingPageLocalDefault } from 'apollo-server-core';
-import { DonationsModule } from './donations/donations.module';
 import { ApolloDriverConfig, ApolloDriver } from '@nestjs/apollo';
 
 @Module({
@@ -19,7 +18,6 @@ import { ApolloDriverConfig, ApolloDriver } from '@nestjs/apollo';
         'subscriptions-transport-ws': true,
       },
     }),
-    DonationsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
